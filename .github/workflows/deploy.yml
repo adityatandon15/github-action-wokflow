@@ -3,7 +3,7 @@ name: Deploy To Ubuntu
 on:
   pull_request:
     branches:
-      - main
+      - master
     types:
       - closed
 
@@ -14,10 +14,10 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout Main
+      - name: Checkout Master
         uses: actions/checkout@v7
         with:
-          ref: main
+          ref: master
 
       - name: Build Application
         run: |
